@@ -1,0 +1,107 @@
+.nav-item {
+    font-family: Century Gothic;
+    margin: 0 auto;
+    padding: 1em 3em;
+    text-align: center;
+}
+.nav-item a {
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Century Gothic;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+}
+/* Top & Bottom Borders Out */
+.topBotomBordersOut a:before, .topBotomBordersOut a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content:"";
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.topBotomBordersOut a:before {
+    top: 0px;
+    transform: translateY(10px);
+}
+.topBotomBordersOut a:after {
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+.topBotomBordersOut a:hover:before, .topBotomBordersOut a:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
+}
+nav {
+    height: 80px;
+    background: #9fdeaf;
+    background: -webkit-linear-gradient(to right, #9fdeaf, #96dbe2);
+    background: linear-gradient(to right, #9fdeaf, #96dbe2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color:#fff !important;
+
+}
+a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+button {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: 1px solid #20B2AA;
+    background-color: #20B2AA;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+input, textarea, select {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.card-body {
+    height: auto;
+}
+
+header {
+    margin-bottom: 60px;
+}
+.alert {
+    height: 31px;
+    margin-bottom:5px
+}
+.alert-danger {
+    text-align: center;
+    padding-top: 0px;
+    font-size:12px;
+}
+.list-group-item.active, .page-item.active .page-link {
+    background-color: #9fdeaf;
+    border-color: #9fdeaf;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
