@@ -6,9 +6,11 @@
 package sample.daos;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import sample.dtos.BookDTO;
 import sample.dtos.PaymentDTO;
@@ -46,7 +48,7 @@ public class PaymentDAO {
 
                 stm = con.prepareStatement(sql);
                 stm.setString(1, payment.getUserId());
-                stm.setDate(2, payment.getDateCreate());
+                stm.setDate(2,  Date.valueOf(LocalDate.now()));
                 stm.setFloat(3, payment.getTotalPayment());
                 stm.setString(4, payment.getAddress());
                 stm.setString(5, payment.getPhoneNumber());
@@ -117,8 +119,8 @@ public class PaymentDAO {
                 rs = stm.executeQuery();
                 list = new ArrayList<>();
                 while (rs.next()) {
-                    PaymentDTO payment = new PaymentDTO(rs.getInt("paymentId"), userId,
-                            rs.getString("address"), rs.getString("phoneNumber"));
+                    PaymentDTO payment = new PaymentDTO(rs.getInt(1), rs.getDate(3), rs.getFloat(4), 
+                            rs.getString(2), rs.getString(5), rs.getString(6), rs.getInt(7));
                     list.add(payment);
                 }
             }
@@ -162,8 +164,8 @@ public class PaymentDAO {
                 rs = stm.executeQuery();
                 list = new ArrayList<>();
                 while (rs.next()) {
-                    PaymentDTO payment = new PaymentDTO(rs.getInt("paymentId"), rs.getString("userID"),
-                            rs.getString("address"), rs.getString("phoneNumber"));
+                    PaymentDTO payment = new PaymentDTO(rs.getInt(1), rs.getDate(3), rs.getFloat(4), 
+                            rs.getString(2), rs.getString(5), rs.getString(6), rs.getInt(7));
                     list.add(payment);
                 }
             }

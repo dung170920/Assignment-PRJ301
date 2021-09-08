@@ -6,7 +6,6 @@
 package sample.dtos;
 
 import java.sql.Date;
-import java.time.LocalDate;
 
 /**
  *
@@ -14,7 +13,7 @@ import java.time.LocalDate;
  */
 public class PaymentDTO {
     private int paymentId = 0;
-    private Date dateCreate = Date.valueOf(LocalDate.now());
+    private Date dateCreate;
     private float totalPayment;
     private String userId;
     private String address;

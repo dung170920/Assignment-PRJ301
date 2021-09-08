@@ -24,26 +24,26 @@
                     <h2>Create Account</h2>
                     <input type="text" placeholder="Full Name" name="fullname"/>
                     <c:if test="${not empty ErrSignUp[0]}" >
-                     <div class="alert alert-danger" role="alert">${ErrSignUp[0]}</div>
+                        <div class="alert alert-danger" role="alert">${ErrSignUp[0]}</div>
                     </c:if>
           
                     <input type="text" placeholder="UserName" name="signUpUsername"/>
                     <c:if test="${not empty ErrSignUp[1]}" >
-                    <div class="alert alert-danger" role="alert">${ErrSignUp[1]}</div>
+                        <div class="alert alert-danger" role="alert">${ErrSignUp[1]}</div>
                     </c:if>
         
                     <input type="password" placeholder="Password" name="signUpPassword"/>
                     <c:if test="${not empty ErrSignUp[2]}" >
-                    <div class="alert alert-danger" role="alert">${ErrSignUp[2]}</div>
+                        <div class="alert alert-danger" role="alert">${ErrSignUp[2]}</div>
                     </c:if>
      
                     <input type="password" placeholder="Confirm Password" name="confirmPass" />  
                     <c:if test="${not empty ErrSignUp[3]}" >
-                    <div class="alert alert-danger" role="alert">${ErrSignUp[3]}</div>
+                        <div class="alert alert-danger" role="alert">${ErrSignUp[3]}</div>
                     </c:if>
                     
                     <c:if test="${not empty ErrDfgSignUp}" >
-                    <div class="alert alert-danger" role="alert">${ErrDfgSignUp}</div>
+                        <div class="alert alert-danger" role="alert">${ErrDfgSignUp}</div>
                     </c:if>
                     <button name="btAction" type="submit" value="SignUp">Sign Up</button>
                 </form>

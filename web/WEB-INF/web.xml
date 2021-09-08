@@ -11,12 +11,4 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/
     <welcome-file-list>
         <welcome-file>UserServlet</welcome-file>
     </welcome-file-list>
-    <servlet>
-        <servlet-name>AdminServlet</servlet-name>
-        <servlet-class>servlet.AdminServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>AdminServlet</servlet-name>
-        <url-pattern>/AdminServlet</url-pattern>
-    </servlet-mapping>
 </web-app>
